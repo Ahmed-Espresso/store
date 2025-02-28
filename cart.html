@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السلة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      
+<header class="header">
+  <img src="logo.png" alt="Header Image" class="header-image">
+ <h1>متجر اسبريسو </h1>
+ 
+</header>
+        
+        <nav  id="sections-nav">
+            <a href="index.html">الرئيسية</a>
+            <a href="search.html">البحث</a>
+            <a href="section1.html">قسم 1</a>
+            <a href="section2.html">قسم 2</a>
+            <a href="section3.html">قسم 3</a>
+            <a href="cart.html">السلة</a>
+           
+        </nav>
+    
+    <main>
+  <ul id="cart-items"></ul>
+  <button  class="more-btn" onclick="confirmCart()">تأكيد الطلب</button>
+  <div id="confirmation-modal" style="display:none;">
+
+    <h2>تأكيد الطلب</h2>
+
+    <form>
+    <div class="form-group">
+      <label for="customer-name">الاسم:</label>
+      <input type="text" id="customer-name" placeholder="الاسم"> 
+    </div>
+
+     <div class="form-group">
+      <label for="customer-phone"> الهاتف:</label>
+      <input type="text" id="customer-phone" placeholder="رقم الهاتف">
+     </div>
+
+     <div class="form-group">
+      <label for="additional-info">ملاحظات:</label>
+      <textarea id="additional-info" placeholder="ملاحظات إضافية (اختياري)"></textarea>
+     </div>
+    </form>
+
+     <div>
+     
+      <button  class="more-btn" onclick="closeModal()">إغلاق</button>
+      <button class="more-btn" onclick="sendOrder()">إرسال الطلب</button>
+     </div>
+
+  </div>
+
+
+    </main>
+
+
+    <div id="popup-message"> يرجى إدخال الاسم ورقم الهاتف </div>
+    
+    <footer>
+        <h1>نورتم</h1>
+    </footer>
+    <script src="script.js"></script>
+    <script>loadCart();</script>
+</body>
+</html>
