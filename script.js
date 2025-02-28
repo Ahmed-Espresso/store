@@ -169,7 +169,6 @@ function sendOrder() {
     loadCart();
 }
 
-localStorage.removeItem('cart'); // إعادة تعيين السلة
 
 
 function showPopupMessage(message) {
